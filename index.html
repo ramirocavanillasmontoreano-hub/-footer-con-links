@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hay jugadores — encuentra el talento que tu equipo necesita." />
+  <title>Hay jugadores — Encontrá tu próximo refuerzo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Hay jugadores inicio">
+      <span class="brand-mark"><span></span><i></i></span>
+      <span>HAY <b>JUGADORES</b></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="active" href="#buscar">Buscar jugadores</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#para-jugadores">Para jugadores</a>
+    </nav>
+    <div class="header-actions">
+      <button class="wallet-button" data-modal="walletModal"><span>◈</span> Mi billetera</button>
+      <button class="icon-button menu-toggle" aria-label="Abrir menú">☰</button>
+      <button class="login-button">Iniciar sesión</button>
+      <button class="primary-button small" data-modal="registerModal">Registrarme</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> EL MERCADO DEL FÚTBOL AMATEUR</p>
+        <h1>El talento<br /><em>está en la cancha.</em></h1>
+        <p class="hero-text">Encontrá jugadores para tu equipo o mostrale al mundo todo lo que podés hacer.</p>
+        <div class="hero-buttons">
+          <a class="primary-button" href="#buscar">Explorar jugadores <span>↗</span></a>
+          <a class="text-button" href="#para-jugadores">Quiero postularme <span>→</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>2.4k+</strong><span>Jugadores</span></div>
+          <div><strong>18</strong><span>Ciudades</span></div>
+          <div><strong>96%</strong><span>Recomendaciones</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Jugador destacado">
+        <div class="hero-circle"></div><div class="hero-lines"></div>
+        <div class="player-cutout"><div class="player-head"></div><div class="player-body"></div><div class="player-legs"></div></div>
+        <div class="floating-card rating-card"><span class="rating-ball">★</span><div><strong>4.9 / 5</strong><small>Jugador destacado</small></div></div>
+        <div class="floating-card position-card"><small>POSICIÓN</small><strong>DELANTERO</strong><span>⚡ Velocidad · Técnica</span></div>
+        <div class="vertical-label">TALENTO LOCAL <span>↗</span></div>
+      </div>
+    </section>
+
+    <section class="search-section" id="buscar">
+      <div class="section-heading"><div><p class="eyebrow green">ENCONTRÁ TU EQUIPO IDEAL</p><h2>Buscá por tus reglas.</h2></div><a href="#jugadores" class="view-all">Ver todos los jugadores <span>→</span></a></div>
+      <div class="search-panel">
+        <label class="search-field main-search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar por nombre, posición o característica..." /></label>
+        <label class="filter-field"><small>MODALIDAD</small><select id="modalityFilter"><option value="all">Fútbol 7 y Fútbol 11</option><option>Fútbol 7</option><option>Fútbol 11</option></select></label>
+        <label class="filter-field"><small>POSICIÓN</small><select id="positionFilter"><option value="all">Todas las posiciones</option><option>Arquero</option><option>Defensor</option><option>Mediocampista</option><option>Delantero</option></select></label>
+        <label class="filter-field location-filter"><small>ZONA</small><select><option>Buenos Aires, AR</option><option>Córdoba, AR</option><option>Rosario, AR</option></select></label>
+        <button class="search-button" id="applyFilters">Buscar <span>→</span></button>
+      </div>
+      <div class="quick-filters"><span>Filtros rápidos:</span><button>⚡ Disponibles ahora</button><button>★ Mejor valorados</button><button>♀ Femenino</button><button>♂ Masculino</button></div>
+    </section>
+
+    <section class="players-section" id="jugadores">
+      <div class="section-heading compact"><div><p class="eyebrow green">JUGADORES CERCA TUYO</p><h2>Talento que pide cancha.</h2></div><div class="results-count" id="resultsCount">Mostrando 4 jugadores</div></div>
+      <div class="player-grid" id="playerGrid">
+        <article class="player-card" data-name="martina rojas" data-position="Delantera" data-modality="Fútbol 7"><div class="player-image player-one"><span class="verified">✓ Verificado</span><button class="favorite" aria-label="Agregar a favoritos">♡</button></div><div class="player-info"><div class="player-meta"><span>FÚTBOL 7 · FEMENINO</span><b>4.8 ★</b></div><h3>Martina Rojas</h3><p>⚽ Delantera <i>·</i> La Plata, BA</p><div class="tags"><span>Velocidad</span><span>Definición</span></div></div></article>
+        <article class="player-card" data-name="lucas ferreyra" data-position="Arquero" data-modality="Fútbol 11"><div class="player-image player-two"><span class="verified">✓ Verificado</span><button class="favorite" aria-label="Agregar a favoritos">♡</button></div><div class="player-info"><div class="player-meta"><span>FÚTBOL 11 · MASCULINO</span><b>5.0 ★</b></div><h3>Lucas Ferreyra</h3><p>⚽ Arquero <i>·</i> Palermo, CABA</p><div class="tags"><span>Reflejos</span><span>Voz de mando</span></div></div></article>
+        <article class="player-card" data-name="sofia benitez" data-position="Mediocampista" data-modality="Fútbol 7"><div class="player-image player-three"><span class="verified">✓ Verificado</span><button class="favorite" aria-label="Agregar a favoritos">♡</button></div><div class="player-info"><div class="player-meta"><span>FÚTBOL 7 · FEMENINO</span><b>4.9 ★</b></div><h3>Sofía Benítez</h3><p>⚽ Mediocampista <i>·</i> San Isidro, BA</p><div class="tags"><span>Creatividad</span><span>Pase</span></div></div></article>
+        <article class="player-card" data-name="tomas acosta" data-position="Defensor" data-modality="Fútbol 11"><div class="player-image player-four"><span class="verified">✓ Verificado</span><button class="favorite" aria-label="Agregar a favoritos">♡</button></div><div class="player-info"><div class="player-meta"><span>FÚTBOL 11 · MASCULINO</span><b>4.7 ★</b></div><h3>Tomás Acosta</h3><p>⚽ Defensor <i>·</i> Vicente López, BA</p><div class="tags"><span>Marca</span><span>Juego aéreo</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-funciona"><div class="how-copy"><p class="eyebrow green">SIMPLE, SEGURO Y DIRECTO</p><h2>Del perfil a la cancha<br /><em>en tres pasos.</em></h2><p>La forma más fácil de encontrar el jugador que tu equipo necesita o conseguir tu próxima oportunidad.</p><a class="primary-button" href="#" data-modal="registerModal">Empezar ahora <span>↗</span></a></div><div class="steps"><div class="step"><span>01</span><div><h3>Creá tu perfil</h3><p>Contá quién sos, qué posición jugás y subí tus mejores videos.</p></div></div><div class="step"><span>02</span><div><h3>Encontrá tu match</h3><p>Filtrá por zona, modalidad y características. Sin vueltas.</p></div></div><div class="step"><span>03</span><div><h3>Hagan historia</h3><p>Contactá, acordá y llevá tu talento a la cancha.</p></div></div></div></section>
+
+    <section class="join-section" id="para-jugadores"><div><p class="eyebrow">¿TENÉS LO QUE HACE FALTA?</p><h2>Tu próximo equipo<br /><em>te está buscando.</em></h2><p>Armá tu perfil gratis y dejá que las oportunidades te encuentren.</p></div><button class="outline-button" data-modal="registerModal">Crear mi perfil <span>↗</span></button></section>
+  </main>
+
+  <footer><a class="brand" href="#inicio"><span class="brand-mark"><span></span><i></i></span><span>HAY <b>JUGADORES</b></span></a><p>El talento no tiene una sola cancha.</p><small>© 2024 Hay jugadores · Hecho para quienes aman el fútbol.</small></footer>
+
+  <div class="modal" id="walletModal" aria-hidden="true"><div class="modal-box"><button class="modal-close">×</button><div class="modal-icon">◈</div><p class="eyebrow green">TU DINERO, BAJO CONTROL</p><h2>Mi billetera</h2><p class="modal-muted">Iniciá sesión para consultar tu saldo y contratar jugadores de forma segura.</p><button class="primary-button full">Iniciar sesión <span>→</span></button><button class="text-button modal-register">Crear una cuenta gratis</button></div></div>
+  <div class="modal" id="registerModal" aria-hidden="true"><div class="modal-box"><button class="modal-close">×</button><p class="eyebrow green">EMPEZÁ HOY</p><h2>Creá tu cuenta</h2><div class="account-choice"><button><strong>⚽</strong><b>Soy jugador</b><small>Quiero mostrar mi talento</small></button><button><strong>⌕</strong><b>Busco jugadores</b><small>Quiero armar mi equipo</small></button></div><button class="primary-button full">Continuar <span>→</span></button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
